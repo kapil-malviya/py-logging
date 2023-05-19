@@ -1,0 +1,22 @@
+INFO:root:A new request came
+INFO:root:request processing completed.
+INFO:root:A new request came
+INFO:root:request processing completed.
+INFO:root:A new request came
+ERROR:root:division by zero
+Traceback (most recent call last):
+  File "D:\file handeling\logging-03.py", line 19, in <module>
+    print(x/y)
+          ~^~
+ZeroDivisionError: division by zero
+INFO:root:request processing completed.
+INFO:root:A new request came
+INFO:root:request processing completed.
+INFO:root:A new request came
+ERROR:root:invalid literal for int() with base 10: "'two'"
+Traceback (most recent call last):
+  File "D:\file handeling\logging-03.py", line 18, in <module>
+    y = int(input('enter second number : '))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: "'two'"
+INFO:root:request processing completed.
