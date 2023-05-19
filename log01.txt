@@ -1,0 +1,9 @@
+WARNING:root:warning message
+ERROR:root:error message
+CRITICAL:root:critical message
+WARNING:root:warning message
+ERROR:root:error message
+CRITICAL:root:critical message
+WARNING:root:warning message 88
+ERROR:root:error message
+CRITICAL:root:critical message
