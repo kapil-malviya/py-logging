@@ -1,0 +1,5 @@
+DEBUG:root:starts from debugging message
+INFO:root:info message
+WARNING:root:warning message 88
+ERROR:root:error message
+CRITICAL:root:till critical message
