@@ -1,0 +1,87 @@
+### Loging : 
+
+
+Logging is a built-in module that provides a flexible and powerful way to record events or messages from your program. It allows you to capture useful information about the program's execution, such as warnings, errors, informational messages, and debugging details. The logging module is part of the Python Standard Library, so you don't need to install any additional packages to use it.
+
+Here's a basic overview of how logging works in Python:
+
+# Importing the logging module :
+
+python code =>> 
+
+"""
+import logging
+
+"""
+
+
+# Configuring the logging :
+
+Before you start using the logging module, you can configure it according to your needs. This step is optional but can be useful for customizing the behavior of logging. For example, you can set the logging level, specify the log format, define output destinations, and more.
+
+
+# Creating loggers :
+
+Loggers are the entry points to the logging system. You can create loggers using the logging.getLogger(name) method. The name parameter is an optional identifier for the logger, usually based on the module or component where the logging occurs.
+
+
+# Logging messages :
+
+Once you have a logger, you can use its methods to log messages at various levels. The common logging levels provided by the module, in increasing order of severity, are DEBUG, INFO, WARNING, ERROR, and CRITICAL. You can log a message by calling the appropriate method on the logger object.
+
+python code =>> 
+
+"""
+logger.debug("This is a debug message")
+logger.info("This is an info message")
+logger.warning("This is a warning message")
+logger.error("This is an error message")
+
+"""
+
+# Controlling log output :
+
+By default, the logging module sends log messages to the console. However, you can customize the log output by adding handlers. Handlers determine where the log messages go, such as the console, a file, or even a network socket. The logging module provides different types of handlers, including StreamHandler, FileHandler, RotatingFileHandler, and more.
+
+
+# Formatting log messages :
+
+You can specify the format of log messages using formatters. Formatters control how log records are formatted before they are output. You can define a custom log format by creating an instance of the logging.Formatter class and adding it to the handler.
+
+
+# Handling exceptions :
+
+The logging module can also capture and log exceptions automatically. You can use the logger.exception() method to log an exception along with its traceback information. This is particularly useful for error handling and troubleshooting.
+
+
+# Logging levels and filtering :
+
+The logging module allows you to set a logging level for each logger. Log messages with a level lower than the specified level will be ignored. This feature enables you to control the verbosity of your logs dynamically. Additionally, you can apply filters to loggers or handlers to further refine which log records are processed and outputted.
+
+
+Here's a simple example that demonstrates the basic usage of the logging module:
+
+
+
+python code =>> 
+
+"""
+import logging
+
+# Configure the logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Create a logger
+logger = logging.getLogger('my_logger')
+
+# Log messages at different levels
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+
+"""
+
+
+
+In this example, log messages are displayed on the console because we used the basicConfig() method without specifying a handler. The logging level is set to DEBUG, so all log messages will be printed. The log format includes the timestamp, log level, and the message itself.
